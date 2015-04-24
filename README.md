@@ -3,7 +3,7 @@
 [![Code Climate](https://codeclimate.com/github/meltheadorable/sortify/badges/gpa.svg)](https://codeclimate.com/github/meltheadorable/sortify)
 [![Coverage Status](https://coveralls.io/repos/meltheadorable/sortify/badge.svg)](https://coveralls.io/r/meltheadorable/sortify)
 [![Dependency Status](https://gemnasium.com/meltheadorable/sortify.svg)](https://gemnasium.com/meltheadorable/sortify)
-
+[![Documentation Status](http://inch-ci.org/github/meltheadorable/sortify.svg?branch=develop)](http://inch-ci.org/github/meltheadorable/sortify)
 
 Sortify helps you handle user-provided sort options in Rails apps.
 
