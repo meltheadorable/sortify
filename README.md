@@ -1,8 +1,14 @@
 #Sortify
+[![Build Status](https://travis-ci.org/meltheadorable/sortify.svg)](https://travis-ci.org/meltheadorable/sortify)
+[![Code Climate](https://codeclimate.com/github/meltheadorable/sortify/badges/gpa.svg)](https://codeclimate.com/github/meltheadorable/sortify)
+[![Coverage Status](https://coveralls.io/repos/meltheadorable/sortify/badge.svg)](https://coveralls.io/r/meltheadorable/sortify)
+[![Dependency Status](https://gemnasium.com/meltheadorable/sortify.svg)](https://gemnasium.com/meltheadorable/sortify)
+[![Documentation Status](http://inch-ci.org/github/meltheadorable/sortify.svg?branch=develop)](http://inch-ci.org/github/meltheadorable/sortify)
 
-Sortify was grown out of a need to have a clean, safe, and simple way to allow user-supplied sorting options in rails.
+Sortify helps you handle user-provided sort options in Rails apps.
 
-> :warning: Sortify is in the very early stages of development right now, has no tests and could introduce breaking changes. Use at your own risk.
+> #### :warning: **Warning**:
+> Sortify is in the very early stages of development right now, has no tests and could introduce breaking changes. Use at your own risk.
 
 ## Getting Started
 
@@ -14,9 +20,7 @@ You can then run `bundle install` to fetch the current development version.
 
 ## Usage
 
-Using Sortify is very simple, and only requires a little bit of code in your models and controllers.
-
-
+Using Sortify is very simple. All you need to do is specify sorting options in your models, then call `sortify` in your controllers naming a sorting option.
 
 ### Models
 
@@ -45,7 +49,8 @@ You can optionally provide a `default_sort_option` which specifies which sort to
 
 For your controllers, Sortify provides the `sortify` method, which takes a string naming one of your sort options as an argument. Because Sortify uses scopes under the hood, it can be chained with other scopes.
 
-> :warning: The `sortify` method will raise a `NoMethodError` if it cannot find a sorting option with the name you passed in unless a valid default is specified.
+> #### :warning: **Warning**:
+> The `sortify` method will raise a `NoMethodError` if it cannot find a sorting option with the name you passed in unless a valid default is specified.
 
 ```ruby
 class ItemController < ApplicationController

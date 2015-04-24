@@ -9,15 +9,18 @@ Gem::Specification.new do |s|
   s.version     = Sortify::VERSION
   s.authors     = ["Melody"]
   s.email       = ["meltheadorable@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Sortify."
-  s.description = "TODO: Description of Sortify."
+  s.homepage    = "https://github.com/meltheadorable/sortify"
+  s.summary     = "Sortify helps you handle user-provided sort options in Rails apps."
+  s.description = "Sortify acts as a wrapper around ActiveRecord scopes, providing a tiny bit of extra functionality to keep track of valid sorting options and call them from user input."
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.md"]
 
-  s.add_dependency "rails", "~> 4.2.1"
+  s.add_dependency "rails", ">= 3.2.0"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec"
+  s.add_development_dependency "fuubar"
+  s.add_development_dependency "coveralls"
+  s.add_development_dependency "appraisal"
 end

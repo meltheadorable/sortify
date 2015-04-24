@@ -1,10 +1,10 @@
 module Sortify
-  def sort_option(name, lambda = -> {} )
+  def sort_option(name, body)
     @sort_options ||= []
     name = name.to_sym
     
     begin
-      scope name, lambda
+      scope name, body
     rescue ArgumentError => e
       raise e
     else
