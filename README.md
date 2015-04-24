@@ -8,7 +8,7 @@ Sortify was grown out of a need to have a clean, safe, and simple way to allow u
 
 To get started, add sortify to your gemfile:
 
-`gem 'sortify', github: 'meltheadorable/github'`
+`gem 'sortify', github: 'meltheadorable/github', branch: 'develop'`
 
 You can then run `bundle install` to fetch the current development version.
 
@@ -30,6 +30,7 @@ First you'll need to extend Sortify, and then you can specify your sort options.
 class Item < ActiveRecord::Base
   extend Sortify # includes the sortify methods in your model
 
+  default_sort_option :most_recent
   sort_option :most_recent, -> { order(updated_at: :desc) }
   sort_option :created_first, -> { order(created_at: :asc) }
 end
@@ -37,12 +38,14 @@ end
 
 `sort_option` takes a symbol as a name, and a lambda, exactly like an ActiveRecord scope.
 
+You can optionally provide a `default_sort_option` which specifies which sort to use in the event that the user-specified sort is invalid or absent.
+
 
 ### Controllers
 
 For your controllers, Sortify provides the `sortify` method, which takes a string naming one of your sort options as an argument. Because Sortify uses scopes under the hood, it can be chained with other scopes.
 
-> :warning: The `sortify` method will raise a `NoMethodError` if it cannot find a sorting option with the name you passed in. An option to specify a default sorting method as a fallback is under development.
+> :warning: The `sortify` method will raise a `NoMethodError` if it cannot find a sorting option with the name you passed in unless a valid default is specified.
 
 ```ruby
 class ItemController < ApplicationController
