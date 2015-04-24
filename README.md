@@ -2,7 +2,8 @@
 
 Sortify helps you handle user-provided sort options in Rails apps.
 
-> :warning: Sortify is in the very early stages of development right now, has no tests and could introduce breaking changes. Use at your own risk.
+> #### :warning: **Warning**:
+> Sortify is in the very early stages of development right now, has no tests and could introduce breaking changes. Use at your own risk.
 
 ## Getting Started
 
@@ -43,7 +44,8 @@ You can optionally provide a `default_sort_option` which specifies which sort to
 
 For your controllers, Sortify provides the `sortify` method, which takes a string naming one of your sort options as an argument. Because Sortify uses scopes under the hood, it can be chained with other scopes.
 
-> :warning: The `sortify` method will raise a `NoMethodError` if it cannot find a sorting option with the name you passed in unless a valid default is specified.
+> #### :warning: **Warning**:
+> The `sortify` method will raise a `NoMethodError` if it cannot find a sorting option with the name you passed in unless a valid default is specified.
 
 ```ruby
 class ItemController < ApplicationController
