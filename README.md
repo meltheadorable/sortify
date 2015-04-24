@@ -1,6 +1,6 @@
 #Sortify
 
-Sortify was grown out of a need to have a clean, safe, and simple way to allow user-supplied sorting options in rails.
+Sortify helps you handle user-provided sort options in Rails apps.
 
 > :warning: Sortify is in the very early stages of development right now, has no tests and could introduce breaking changes. Use at your own risk.
 
@@ -14,9 +14,7 @@ You can then run `bundle install` to fetch the current development version.
 
 ## Usage
 
-Using Sortify is very simple, and only requires a little bit of code in your models and controllers.
-
-
+Using Sortify is very simple. All you need to do is specify sorting options in your models, then call `sortify` in your controllers naming a sorting option.
 
 ### Models
 
