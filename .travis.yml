@@ -13,3 +13,4 @@ gemfile:
 branches:
   only:
     - stable
+    - develop
