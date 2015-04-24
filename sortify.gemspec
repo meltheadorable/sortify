@@ -10,11 +10,11 @@ Gem::Specification.new do |s|
   s.authors     = ["Melody"]
   s.email       = ["meltheadorable@gmail.com"]
   s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Sortify."
-  s.description = "TODO: Description of Sortify."
+  s.summary     = "Sortify helps you handle user-provided sort options in Rails apps."
+  s.description = "Sortify acts as a wrapper around ActiveRecord scopes, providing a tiny bit of extra functionality to keep track of valid sorting options and call them from user input."
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", "~> 4.2.1"
 
