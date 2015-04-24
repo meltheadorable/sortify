@@ -42,7 +42,7 @@ end
 
 For your controllers, Sortify provides the `sortify` method, which takes a string naming one of your sort options as an argument. Because Sortify uses scopes under the hood, it can be chained with other scopes.
 
-> :warning: The `sortify` method will raise a `NoMethodError` if it cannot find a sorting option with the name you passed in. An option to specify a default sorting method is under development.
+> :warning: The `sortify` method will raise a `NoMethodError` if it cannot find a sorting option with the name you passed in. An option to specify a default sorting method as a fallback is under development.
 
 ```ruby
 class ItemController < ApplicationController
