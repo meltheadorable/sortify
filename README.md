@@ -47,8 +47,8 @@ For your controllers, Sortify provides the `sortify` method, which takes a strin
 ```ruby
 class ItemController < ApplicationController
   def index
-    @items = Item.sortify("most_recent") # sorts all of your items by most recent
-    @other_items = Item.sortify(params[:sort]) # sorts items by the method specified by the user in the parameters
+    @items = Item.sortify("most_recent") # sorts your items by most recent
+    @others = Item.sortify(params[:sort]) # sorts by the method specified in the params
   end
 end
 ```
