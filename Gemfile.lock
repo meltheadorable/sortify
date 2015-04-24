@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sortify (0.0.3)
+    sortify (0.0.4)
       rails (>= 3.2.0)
 
 GEM
