@@ -8,7 +8,7 @@ Sortify was grown out of a need to have a clean, safe, and simple way to allow u
 
 To get started, add sortify to your gemfile:
 
-`gem 'sortify', github: 'meltheadorable/github'`
+`gem 'sortify', github: 'meltheadorable/github', branch: 'develop'`
 
 You can then run `bundle install` to fetch the current development version.
 
