@@ -8,15 +8,15 @@
 Sortify helps you handle user-provided sort options in Rails apps.
 
 > #### :warning: **Warning**:
-> Sortify is in the very early stages of development right now, has no tests and could introduce breaking changes. Use at your own risk.
+> Sortify is in the very early stages of development right now, has few tests and could introduce breaking changes. Use at your own risk.
 
 ## Getting Started
 
 To get started, add sortify to your gemfile:
 
-`gem 'sortify', github: 'meltheadorable/github', branch: 'develop'`
+`gem 'sortify'`
 
-You can then run `bundle install` to fetch the current development version.
+Then run `bundle install` to fetch the current version.
 
 ## Usage
 

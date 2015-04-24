@@ -1,7 +1,7 @@
 module Sortify
   def sort_option(name, body)
     @sort_options ||= []
-    name = name.to_sym
+    name = name.to_sym 
     
     begin
       scope name, body
@@ -20,8 +20,8 @@ module Sortify
     return @sort_options
   end
 
-  def sortify(sort_option)
-    sort_option = sort_option.to_sym
+  def sortify(sort_option = "")
+    sort_option = sort_option.to_sym unless sort_option == nil
     
     if @sort_options.include? sort_option
       self.send(sort_option)
