@@ -1,5 +1,4 @@
-##Sortify
--------
+#Sortify
 
 Sortify was grown out of a need to have a clean, safe, and simple way to allow user-supplied sorting options in rails.
 
