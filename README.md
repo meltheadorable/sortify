@@ -22,7 +22,7 @@ Using Sortify is very simple, and only requires a little bit of code in your mod
 
 Sortify acts as a wrapper around ActiveRecord scopes, providing a tiny bit of extra functionality to keep track of valid sorting options.
 
-If you don't know what scopes are, [you can read about here](http://guides.rubyonrails.org/active_record_querying.html#scopes):
+If you don't know what scopes are, [you can read about them here](http://guides.rubyonrails.org/active_record_querying.html#scopes):
 
 First you'll need to extend Sortify, and then you can specify your sort options.
 
