@@ -1,4 +1,5 @@
 #Sortify
+[![Build Status](https://travis-ci.org/meltheadorable/sortify.svg)](https://travis-ci.org/meltheadorable/sortify)
 [![Code Climate](https://codeclimate.com/github/meltheadorable/sortify/badges/gpa.svg)](https://codeclimate.com/github/meltheadorable/sortify)
 [![Coverage Status](https://coveralls.io/repos/meltheadorable/sortify/badge.svg)](https://coveralls.io/r/meltheadorable/sortify)
 
