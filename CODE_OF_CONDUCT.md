@@ -6,7 +6,7 @@ Harassment in code and discussion or violation of physical boundaries is complet
 
 ## In detail
 
-Harassment includes offensive verbal comments related to gender identity, gender expression, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion, sexual images, deliberate intimidation, stalking, sustained disruption, and unwelcome sexual attention.
+Harassment includes offensive verbal comments related to gender identity, gender expression, sexual orientation, disability, physical appearance, body size, race, ethnicity, nationality, religion, as well as sexual images, deliberate intimidation, stalking, sustained disruption, and unwelcome sexual attention.
 
 Individuals asked to stop any harassing behavior are expected to comply immediately.
 
