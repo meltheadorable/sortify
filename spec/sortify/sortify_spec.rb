@@ -38,6 +38,16 @@ describe Sortify do
     expect{ ItemWithBadDefault.sortify }.to raise_error "The default sort option you provided, 'nothing_here', does not exist."
   end
   
+  it "should raise an argument error when an invalid sort option is specified" do
+    expect{
+      class BrokenSortOption < ActiveRecord::Base
+        extend Sortify
+        
+        sort_option :destroy, -> { order("created_at ASC") }
+      end
+    }.to raise_error ArgumentError
+  end
+  
   context "sorting methods" do
     before(:each) do
       @item1 = SortableItem.create(name: "First Item")
