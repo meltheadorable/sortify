@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sortify (0.1.2)
+    sortify (0.1.3)
       rails (>= 3.2.0)
 
 GEM
@@ -120,7 +120,7 @@ GEM
     rspec-expectations (3.3.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.3.0)
-    rspec-mocks (3.3.0)
+    rspec-mocks (3.3.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.3.0)
     rspec-support (3.3.0)
