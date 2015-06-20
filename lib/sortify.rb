@@ -25,12 +25,14 @@ module Sortify
     
     if @sort_options.include? sort_option
       self.send(sort_option)
-    else
+    elsif sort_option.empty?
       begin
         self.send(@default_sort_option)
       rescue
-        raise NoMethodError, "The default sort option you provided, '#{@default_sort_option.to_s}' does not exist."
+        raise NoMethodError, "The default sort option you provided, '#{@default_sort_option.to_s}', does not exist."
       end
+    else
+      raise NoMethodError, "The sort option you provided, '#{sort_option}', does not exist."
     end
   end
 end
