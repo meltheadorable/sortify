@@ -10,7 +10,7 @@ Harassment includes offensive verbal comments related to gender identity, gender
 
 Individuals asked to stop any harassing behavior are expected to comply immediately.
 
-Maintainers are also subject to the anti-harassment policy.
+Maintainers, including members of the core team, are also subject to the anti-harassment policy.
 
 If anyone engages in harassing behavior, including maintainers, we may take appropriate action, up to and including warning the offender, deletion of comments, removal from the project’s codebase and communication systems, and escalation to GitHub support.
 
