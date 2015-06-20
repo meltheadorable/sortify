@@ -14,8 +14,8 @@ class SortableItem < ActiveRecord::Base
   extend Sortify
   
   default_sort_option :alphabetical
-  sort_option :alphabetical, -> { order(name: :asc) }
-  sort_option :recent, -> { order(created_at: :desc) }
+  sort_option :alphabetical, -> { order("name ASC") }
+  sort_option :recent, -> { order("created_at DESC") }
 end
 
 class ItemWithBadDefault < ActiveRecord::Base
