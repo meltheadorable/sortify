@@ -51,12 +51,12 @@ describe Sortify do
     
     it "should return sorted list of items" do
       @sorted = SortableItem.sortify("recent")
-      expect(@sorted.pluck(:name)).to eq ["Last Item", "Second Item", "First Item"]
+      expect(@sorted.all.map(&:name)).to eq ["Last Item", "Second Item", "First Item"]
     end
     
     it "should return a sorted list when a default is specified" do
       @sorted = SortableItem.sortify
-      expect(@sorted.pluck(:name)).to eq [ "First Item", "Last Item", "Second Item"]
+      expect(@sorted.all.map(&:name)).to eq [ "First Item", "Last Item", "Second Item"]
     end
   end
   
