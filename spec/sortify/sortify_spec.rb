@@ -14,8 +14,8 @@ class SortableItem < ActiveRecord::Base
   extend Sortify
   
   default_sort_option :alphabetical
-  sort_option :alphabetical, -> { order(name: :asc) }
-  sort_option :recent, -> { order(created_at: :desc) }
+  sort_option :alphabetical, -> { order("name ASC") }
+  sort_option :recent, -> { order("created_at DESC") }
 end
 
 class ItemWithBadDefault < ActiveRecord::Base
@@ -38,6 +38,16 @@ describe Sortify do
     expect{ ItemWithBadDefault.sortify }.to raise_error "The default sort option you provided, 'nothing_here', does not exist."
   end
   
+  it "should raise an argument error when an invalid sort option is specified" do
+    expect{
+      class BrokenSortOption < ActiveRecord::Base
+        extend Sortify
+        
+        sort_option :destroy, -> { order("created_at ASC") }
+      end
+    }.to raise_error ArgumentError
+  end
+  
   context "sorting methods" do
     before(:each) do
       @item1 = SortableItem.create(name: "First Item")
@@ -51,12 +61,12 @@ describe Sortify do
     
     it "should return sorted list of items" do
       @sorted = SortableItem.sortify("recent")
-      expect(@sorted.pluck(:name)).to eq ["Last Item", "Second Item", "First Item"]
+      expect(@sorted.map(&:name)).to eq ["Last Item", "Second Item", "First Item"]
     end
     
     it "should return a sorted list when a default is specified" do
       @sorted = SortableItem.sortify
-      expect(@sorted.pluck(:name)).to eq [ "First Item", "Last Item", "Second Item"]
+      expect(@sorted.map(&:name)).to eq [ "First Item", "Last Item", "Second Item"]
     end
   end
   

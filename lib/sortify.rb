@@ -3,6 +3,10 @@ module Sortify
     @sort_options ||= []
     name = name.to_sym 
     
+    if self.respond_to?(name)
+      raise ArgumentError, "Could not create sort option, There is an existing method with this name."
+    end
+    
     begin
       scope name, body
     rescue ArgumentError => e
