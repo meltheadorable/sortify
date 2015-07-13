@@ -7,13 +7,8 @@ module Sortify
       raise ArgumentError, "Could not create sort option, There is an existing method with this name."
     end
     
-    begin
-      scope name, body
-    rescue ArgumentError => e
-      raise e
-    else
-      @sort_options << name
-    end
+    scope name, body
+    @sort_options << name 
   end
   
   def default_sort_option(name)
