@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sortify (0.1.6)
+    sortify (0.1.7)
       activerecord (>= 3.2.0)
       whitelist_scope (~> 0.1.0)
 
@@ -82,7 +82,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.1)
-    whitelist_scope (0.1.1)
+    whitelist_scope (0.1.2)
       activerecord (>= 3.2.0)
 
 PLATFORMS
