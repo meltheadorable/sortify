@@ -1,37 +1,28 @@
+require 'whitelist_scope'
+
 module Sortify
+  include WhitelistScope
   def sort_option(name, body)
-    @sort_options ||= []
-    name = name.to_sym 
-    
-    if self.respond_to?(name)
-      raise ArgumentError, "Could not create sort option, There is an existing method with this name."
-    end
-    
-    scope name, body
-    @sort_options << name 
+    whitelist_scope name, body
   end
-  
+
   def default_sort_option(name)
     @default_sort_option = name.to_sym
   end
-  
+
   def sort_options
-    return @sort_options
+    return whitelist
   end
 
   def sortify(sort_option = "")
-    sort_option = sort_option.to_sym unless sort_option == nil
-    
-    if @sort_options.include? sort_option
-      self.send(sort_option)
-    elsif sort_option.empty?
+    if sort_option.empty?
       begin
-        self.send(@default_sort_option)
+        call_whitelisted_scope(@default_sort_option)
       rescue
         raise NoMethodError, "The default sort option you provided, '#{@default_sort_option.to_s}', does not exist."
       end
     else
-      raise NoMethodError, "The sort option you provided, '#{sort_option}', does not exist."
+      call_whitelisted_scope(sort_option)
     end
   end
 end
