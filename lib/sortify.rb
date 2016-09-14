@@ -1,15 +1,15 @@
-require 'whitelist_scope'
+require "whitelist_scope"
 
 module Sortify
   include WhitelistScope
-  alias_method :sort_option, :whitelist_scope
-  alias_method :sort_options, :whitelist
+  alias sort_option whitelist_scope
+  alias sort_options whitelist
 
   def default_sort_option(name)
     @default_sort_option = name.to_sym
   end
 
-  def sortify(sort_option = '')
+  def sortify(sort_option = "")
     if sort_option.empty?
       begin
         call_whitelisted_scope(@default_sort_option)
