@@ -7,6 +7,7 @@ rvm:
   - 2.1
   - 2.2.2
   - 2.3.0
+  - 2.4.0
 
 before_install:
   - gem install bundler
@@ -17,15 +18,19 @@ gemfile:
   - gemfiles/4.1.gemfile
   - gemfiles/4.2.gemfile
   - gemfiles/5.0.gemfile
+  - gemfiles/5.1.gemfile
 
 matrix:
   exclude:
   - rvm: 1.9
     gemfile: gemfiles/5.0.gemfile
+    gemfile: gemfiles/5.1.gemfile
   - rvm: 2.0
     gemfile: gemfiles/5.0.gemfile
+    gemfile: gemfiles/5.1.gemfile
   - rvm: 2.1
     gemfile: gemfiles/5.0.gemfile
+    gemfile: gemfiles/5.1.gemfile
 
 branches:
   only:
