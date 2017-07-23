@@ -1,4 +1,4 @@
-#Sortify
+# Sortify
 [![Gem Version](https://badge.fury.io/rb/sortify.svg)](http://badge.fury.io/rb/sortify)
 [![Build Status](https://travis-ci.org/meltheadorable/sortify.svg)](https://travis-ci.org/meltheadorable/sortify)
 [![Code Climate](https://codeclimate.com/github/meltheadorable/sortify/badges/gpa.svg)](https://codeclimate.com/github/meltheadorable/sortify)
