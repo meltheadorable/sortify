@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sortify (0.1.8)
+    sortify (0.1.9)
       activerecord (>= 3.2.0)
       whitelist_scope (~> 0.1.0)
 
@@ -67,7 +67,7 @@ GEM
     tins (1.15.0)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
-    whitelist_scope (0.1.3)
+    whitelist_scope (0.1.4)
       activerecord (>= 3.2.0)
 
 PLATFORMS
